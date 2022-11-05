@@ -47,7 +47,6 @@ public class StockServiceImplTest {
 		stocks.add(mock(Stock.class));
 		
 		assertFalse(stockServiceImpl.retrieveAllStocks().isEmpty());
-
 		
 	}
 	
@@ -66,10 +65,7 @@ public class StockServiceImplTest {
 	void testUpdateStock(){
 		//assertTrue(stockServiceImpl.addStock().isEmpty());
 		stockServiceImpl.updateStock(mock(Stock.class));
-
 		verify(stockRepository).save(any());
-		
-
 		
 	}
 
