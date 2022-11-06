@@ -9,7 +9,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.esprit.examen</groupId>
-	<artifactId>devops-SNAPSHOT</artifactId>
+	<artifactId>devops</artifactId>
 	<version>1.0</version>
 	<name>devops</name>
 	<description>devops</description>
