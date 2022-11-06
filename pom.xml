@@ -77,7 +77,8 @@
 		<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-		  <executions>
+				<version>3.0.1</version>
+				  <executions>
           <execution>
             <!-- This id must match the -Prelease-profile id value or else sources will be "uploaded" twice, which causes Nexus to fail -->
             <id>attach-sources</id>
@@ -86,7 +87,6 @@
             </goals>
           </execution>
         </executions>
-				
 			</plugin>
 			
 
