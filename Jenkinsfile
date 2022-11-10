@@ -38,7 +38,7 @@ pipeline {
     }
     stage('Build Docker'){
       steps{
-        sh 'docker build -t saifhendili/tpachat .'
+        sh 'docker build -t saifhendili/tpachat -f Dockerfile .'
        }
     }
  
