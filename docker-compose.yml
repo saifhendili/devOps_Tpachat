@@ -18,7 +18,7 @@ services:
     ports:
       - "8089:8089"
     depends_on:
-      - mysqldb
+      - mysqldbb
 
     environment:
       - spring.datasource.url=jdbc:mysql://mysqldb:3306/tpachat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
