@@ -36,9 +36,8 @@ pipeline {
         sh 'mvn clean deploy -Dmaven.test.skip=true'
       }
     }
-       }
-      }
-      stage('Build Docker'){
+    
+          stage('Build Docker'){
             steps{
                 sh 'docker build -t saifhendili/devops .'
             }
@@ -48,3 +47,5 @@ pipeline {
                 sh 'docker login -u saifhendili -p girod 131313'
             }
         }
+       }
+      }
