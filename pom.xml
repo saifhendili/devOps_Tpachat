@@ -9,10 +9,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.esprit.examen</groupId>
-	<artifactId>tpachatprojectt</artifactId>
+	<artifactId>devops</artifactId>
 	<version>1.0</version>
-	<name>tpachatprojectt</name>
-	<description>tpachatprojectt</description>
+	<name>devops</name>
+	<description>devops</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.0.1</maven-jar-plugin.version>
@@ -103,7 +103,7 @@
 
 
 		</plugins>
-		<finalName>tpachatprojectt</finalName>
+		<finalName>devops</finalName>
 
 	</build>
 	
