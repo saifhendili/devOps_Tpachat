@@ -38,7 +38,7 @@ pipeline {
     }
     stage('Build Docker'){
       steps{
-        sh 'docker build -t saifhendili/tpAchatProject .'
+        sh 'docker build -t saifhendili/devops .'
        }
     }
     stage('Docker Login'){
