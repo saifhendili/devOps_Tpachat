@@ -38,7 +38,7 @@ pipeline {
     }
     stage('Build Docker'){
       steps{
-        sh 'docker build -t saifhendili/tpachat -f Dockerfile .'
+        sh 'docker build -t saifhendili/devops .'
        }
     }
  
@@ -49,7 +49,7 @@ pipeline {
         }
    stage('Docker Push'){
       steps{
-        sh 'docker push saifhendili/tpachat .'
+        sh 'docker push saifhendili/devops .'
        }
     }
      stage('Start container') {
