@@ -57,14 +57,7 @@ pipeline {
                 }
             }
         }
-                stage('Deploy our image') {
-            steps {
-                script {
-                    docker.withRegistry( '', registryCredential ) {
-                        dockerImage.push()
-                    }
-                }
-            }
+           
         }
                 stage('Cleaning up') {
             steps {
