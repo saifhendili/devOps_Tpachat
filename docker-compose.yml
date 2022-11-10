@@ -1,8 +1,15 @@
 version: '2.0'
 services:
 
-  mysqldbb:
-    container_name: mysqldbb
+  angular-app:
+    #The docker file in FE, builds and provides the docker image.
+    image: nassimbenaissa/angularproject:latest
+    ports:
+      - 4200:4200 #Forwars the exposed port 4200 on the container to port 4200 on the host machine
+    depends_on:
+      - tpachatproject
+  mysqldb:
+    container_name: mysqldb
     image: mysql
     ports:
         - 3306:3306
@@ -11,19 +18,19 @@ services:
         - MYSQL_ROOT_PASSWORD=root
 
 
-  devops:
-    container_name: devops
-    image: saifhendili/devops:latest
+  tpachatproject:
+    container_name: tpAchatProject
+    image: nassimbenaissa/tpachatprojectt:latest
     restart: on-failure
     ports:
-      - "8088:8088"
+      - "8089:8089"
     depends_on:
-      - mysqldbb
+      - mysqldb
 
     environment:
       - spring.datasource.url=jdbc:mysql://mysqldb:3306/tpachato?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
       - spring.datasource.username=root
-      - spring.datasource.password=root
+      - spring.datasource.password=root 
       - spring.jpa.show-sql=true
       - spring.jpa.hibernate.ddl-auto=update
       - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect

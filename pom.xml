@@ -9,10 +9,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.esprit.examen</groupId>
-	<artifactId>devops</artifactId>
+	<artifactId>tpachatprojectt</artifactId>
 	<version>1.0</version>
-	<name>devops</name>
-	<description>devops</description>
+	<name>tpachatprojectt</name>
+	<description>tpachatprojectt</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.0.1</maven-jar-plugin.version>
@@ -89,20 +89,21 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.0.1</version>
 				<configuration>  
-                <archive>  
-                    <manifest>  
-                        <mainClass>com.javatpoint.AppMain</mainClass>  
-                    </manifest>  
-                </archive>  
+                <executions>  
+                    <execution>  
+                        <id>default-deploy</id>  
+                        <phase>deploy</phase>  
+                        <goals>
+                        <goal>deploy</goal>
+                        </goals>  
+                    </execution>  
+                </executions>  
                 </configuration>  
 			</plugin>
 
 
 		</plugins>
-		<finalName>devops</finalName>
-
-
-
+		<finalName>tpachatprojectt</finalName>
 
 	</build>
 	
