@@ -47,11 +47,6 @@ pipeline {
         sh 'docker login -u saifhendili -p "girod 131313"'
        }
         }
-   stage('Docker Push'){
-      steps{
-        sh 'docker push saifhendili/devops .'
-       }
-    }
      stage('Start container') {
              steps {
                 sh 'docker-compose up -d '
