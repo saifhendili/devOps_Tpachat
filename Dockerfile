@@ -1,4 +1,4 @@
 FROM openjdk:11
 EXPOSE 8089
-ADD /target/tpachatprojectt.jar tpachatprojectt.jar
-ENTRYPOINT ["java", "-jar", "/tpachatprojectt.jar"]
+ADD /target/devops.jar devops.jar
+ENTRYPOINT ["java", "-jar", "/devops.jar"]
