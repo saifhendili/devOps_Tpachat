@@ -22,6 +22,18 @@ pipeline {
                 sh """ mvn test """;
             }
         }
+         stage('Build Docker'){
+      steps{
+        sh 'docker build -t saifhendili/devops .'
+       }
+    }
+    stage('Docker Login'){
+      steps{
+        sh 'docker login'
+        sh 'saifhendili'
+        sh 'girod 131313'
+       }
+    }
     stage("MVN SonarQube") {
       
        		steps {
@@ -36,16 +48,7 @@ pipeline {
         sh 'mvn clean deploy -Dmaven.test.skip=true'
       }
     }
-    stage('Build Docker'){
-      steps{
-        sh 'docker build -t saifhendili/devops .'
-       }
-    }
-    stage('Docker Login'){
-      steps{
-        sh 'docker login -u saifhendili -p girod 131313'
-       }
-    }
+   
        }
       }
      
