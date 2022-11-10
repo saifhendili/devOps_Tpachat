@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "saifhendili/devops"
+        registry = "saifhendili/mydevops"
         registryCredential = 'dockerHub'
         dockerImage = ''
     }
@@ -58,7 +58,15 @@ pipeline {
                 }
             }
         }
-              
+      stage('Deploy our image') {
+            steps {
+                script {
+                    docker.withRegistry( '', registryCredential ) {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }    
                 stage('Cleaning up') {
             steps {
                 echo "docker rmi $registry:$BUILD_NUMBER "
