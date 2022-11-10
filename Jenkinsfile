@@ -33,7 +33,14 @@ pipeline {
   				-Dsonar.login=6e96b26c7adf6d429cc30258cf59c6aa8e33b666"
       	}
     }
-          stage('MVN Test') {
+            stage('Test mvn') {
+            steps {
+              sh """ mvn -DskipTests clean package """ 
+                sh """ mvn install """;
+                sh """ mvn test """;
+            }
+        }
+           stage('JUNIT') {
             steps {
                 sh 'mvn test'
             }
