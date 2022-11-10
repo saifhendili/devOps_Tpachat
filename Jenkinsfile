@@ -37,6 +37,7 @@ pipeline {
             steps {
               sh """ mvn -DskipTests clean package """ 
                 sh """ mvn install """;
+  
             }
         }
 
@@ -57,8 +58,7 @@ pipeline {
                 }
             }
         }
-           
-        }
+              
                 stage('Cleaning up') {
             steps {
                 echo "docker rmi $registry:$BUILD_NUMBER "
