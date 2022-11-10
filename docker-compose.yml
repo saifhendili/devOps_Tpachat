@@ -16,7 +16,7 @@ services:
     image: saifhendili/devops:latest
     restart: on-failure
     ports:
-      - "8089:8089"
+      - "8088:8088"
     depends_on:
       - mysqldbb
 
