@@ -44,7 +44,7 @@ pipeline {
         }
         stage('Docker Login'){
             steps{
-                sh 'docker login -u saifhendili -p girod 131313'
+                sh 'docker login --username saifhendili --password girod 131313'
             }
         }
        }
