@@ -11,9 +11,9 @@ services:
         - MYSQL_ROOT_PASSWORD=root
 
 
-  tpachatproject:
+  tpAchatProject:
     container_name: tpAchatProject
-    image: saifhendili/tpachatprojectt:latest
+    image: saifhendili/tpAchatProject:latest
     restart: on-failure
     ports:
       - "8089:8089"
