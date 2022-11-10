@@ -46,6 +46,11 @@ pipeline {
         sh 'docker login -u saifhendili -p "girod 131313"'
        }
         }
+          stage('Docker Compose'){
+      steps{
+        sh 'docker-compose up'
+       }
+        }
        }
       }
      
