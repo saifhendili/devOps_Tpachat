@@ -3,7 +3,7 @@ services:
 
   angular-app:
     #The docker file in FE, builds and provides the docker image.
-    image: nassimbenaissa/angularproject:latest
+    image: saifhendili/angularproject:latest
     ports:
       - 4200:4200 #Forwars the exposed port 4200 on the container to port 4200 on the host machine
     depends_on:
@@ -20,7 +20,7 @@ services:
 
   tpachatproject:
     container_name: tpAchatProject
-    image: nassimbenaissa/tpachatprojectt:latest
+    image: saifhendili/tpachatprojectt:latest
     restart: on-failure
     ports:
       - "8089:8089"
