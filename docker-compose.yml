@@ -1,13 +1,6 @@
 version: '2.0'
 services:
 
-  angular-app:
-    #The docker file in FE, builds and provides the docker image.
-    image: saifhendili/angularproject:latest
-    ports:
-      - 4200:4200 #Forwars the exposed port 4200 on the container to port 4200 on the host machine
-    depends_on:
-      - tpachatproject
   mysqldb:
     container_name: mysqldb
     image: mysql
