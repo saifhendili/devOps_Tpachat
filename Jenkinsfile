@@ -38,14 +38,20 @@ pipeline {
     }
     stage('Build Docker'){
       steps{
-        sh 'docker build -t saifhendili/devops .'
+        sh 'docker build -t saifhendili/tpachat .'
        }
     }
+ 
     stage('Docker Login'){
       steps{
         sh 'docker login -u saifhendili -p "girod 131313"'
        }
         }
+   stage('Docker Push'){
+      steps{
+        sh 'docker push saifhendili/tpachat .'
+       }
+    }
      stage('Start container') {
              steps {
                 sh 'docker-compose up -d '
