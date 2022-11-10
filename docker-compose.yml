@@ -11,9 +11,9 @@ services:
         - MYSQL_ROOT_PASSWORD=root
 
 
-  devops:
-    container_name: devops
-    image: saifhendili/devops:latest
+  mydevops:
+    container_name: mydevops
+    image: saifhendili/mydevops:latest
     restart: on-failure
     ports:
       - "8089:8089"
