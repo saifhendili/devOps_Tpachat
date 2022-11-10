@@ -40,11 +40,7 @@ pipeline {
                 sh """ mvn test """;
             }
         }
-           stage('JUNIT') {
-            steps {
-                sh 'mvn test'
-            }
-        }
+
     stage('Nexus') {
       steps {
         sh 'mvn clean deploy -Dmaven.test.skip=true'
