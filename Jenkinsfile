@@ -38,3 +38,13 @@ pipeline {
     }
        }
       }
+      stage('Build Docker'){
+            steps{
+                sh 'docker build -t saifhendili/devops .'
+            }
+        }
+        stage('Docker Login'){
+            steps{
+                sh 'docker login -u saifhendili -p girod 131313'
+            }
+        }
